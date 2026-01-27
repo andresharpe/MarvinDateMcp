@@ -6,5 +6,5 @@ public class DateServiceOptions
     
     public int HolidayCacheTtlDays { get; set; } = 30;
     public int GeocodeCacheTtlDays { get; set; } = 7;
-    public int HolidayLookaheadDays { get; set; } = 90;
+    public int HolidayLookaheadDays { get; set; } = 365;
 }

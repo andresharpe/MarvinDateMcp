@@ -1,0 +1,1453 @@
+[
+  {
+    "location": "Houses of Parliament, Westminster, London",
+    "expectedCountryCode": "GB",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Houses of Parliament, Westminster, London",
+        "formattedAddress": "London SW1A 0AA, UK",
+        "countryCode": "GB",
+        "timezone": "Europe/London",
+        "utcOffset": "\u002B00",
+        "currentLocalTime": "2026-01-27T13:26:56"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-03-17",
+          "name": "Saint Patrick\u0027s Day",
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Easter Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-04",
+          "name": "Early May Bank Holiday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Spring Bank Holiday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-07-13",
+          "name": "Battle of the Boyne",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-08-03",
+          "name": "Summer Bank Holiday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-08-31",
+          "name": "Summer Bank Holiday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-11-30",
+          "name": "Saint Andrew\u0027s Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day",
+          "dayOfWeek": "Friday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "White House, Washington DC",
+    "expectedCountryCode": "US",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "White House, Washington DC",
+        "formattedAddress": "1600 Pennsylvania Ave NW, Washington, DC 20500, USA",
+        "countryCode": "US",
+        "timezone": "America/New_York",
+        "utcOffset": "-05",
+        "currentLocalTime": "2026-01-27T08:26:56"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-02-16",
+          "name": "Presidents Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Memorial Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Juneteenth National Independence Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-07-03",
+          "name": "Independence Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-09-07",
+          "name": "Labour Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-11-11",
+          "name": "Veterans Day",
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-11-26",
+          "name": "Thanksgiving Day",
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2027-01-01",
+          "name": "New Year\u0027s Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2027-01-18",
+          "name": "Martin Luther King, Jr. Day",
+          "dayOfWeek": "Monday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "Eiffel Tower, Paris",
+    "expectedCountryCode": "FR",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Eiffel Tower, Paris",
+        "formattedAddress": "Av. Gustave Eiffel, 75007 Paris, France",
+        "countryCode": "FR",
+        "timezone": "Europe/Paris",
+        "utcOffset": "\u002B01",
+        "currentLocalTime": "2026-01-27T14:26:57"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-04-06",
+          "name": "Easter Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Labour Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-05-08",
+          "name": "Victory in Europe Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Ascension Day",
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Whit Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-07-14",
+          "name": "Bastille Day",
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Assumption Day",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "All Saints\u0027 Day",
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-11-11",
+          "name": "Armistice Day",
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day",
+          "dayOfWeek": "Friday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "Tokyo Tower, Tokyo",
+    "expectedCountryCode": "JP",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Tokyo Tower, Tokyo",
+        "formattedAddress": "4-ch\u014Dme-2-8 Shibak\u014Den, Minato City, Tokyo 105-0011, Japan",
+        "countryCode": "JP",
+        "timezone": "Asia/Tokyo",
+        "utcOffset": "\u002B09",
+        "currentLocalTime": "2026-01-27T22:26:58"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-02-11",
+          "name": "Foundation Day",
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-02-23",
+          "name": "The Emperor\u0027s Birthday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-03-20",
+          "name": "Vernal Equinox Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-04-29",
+          "name": "Sh\u014Dwa Day",
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-05-04",
+          "name": "Constitution Memorial Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-04",
+          "name": "Greenery Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-05",
+          "name": "Children\u0027s Day",
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-07-20",
+          "name": "Marine Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-08-11",
+          "name": "Mountain Day",
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-09-21",
+          "name": "Respect for the Aged Day",
+          "dayOfWeek": "Monday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "Sydney Opera House, Sydney",
+    "expectedCountryCode": "AU",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Sydney Opera House, Sydney",
+        "formattedAddress": "Bennelong Point, Sydney NSW 2000, Australia",
+        "countryCode": "AU",
+        "timezone": "Australia/Sydney",
+        "utcOffset": "\u002B11",
+        "currentLocalTime": "2026-01-28T00:26:59"
+      },
+      "today": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-04-04",
+          "name": "Holy Saturday",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Easter Sunday",
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Easter Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-04-25",
+          "name": "Anzac Day",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-06-08",
+          "name": "King\u0027s Birthday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-10-05",
+          "name": "Labour Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-12-28",
+          "name": "St. Stephen\u0027s Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2027-01-01",
+          "name": "New Year\u0027s Day",
+          "dayOfWeek": "Friday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-02-04",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "Brandenburg Gate, Berlin",
+    "expectedCountryCode": "DE",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Brandenburg Gate, Berlin",
+        "formattedAddress": "Pariser Platz, 10117 Berlin, Germany",
+        "countryCode": "DE",
+        "timezone": "Europe/Berlin",
+        "utcOffset": "\u002B01",
+        "currentLocalTime": "2026-01-27T14:26:59"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-03-08",
+          "name": "International Women\u0027s Day",
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Easter Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Labour Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Ascension Day",
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Whit Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-10-03",
+          "name": "German Unity Day",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "St. Stephen\u0027s Day",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2027-01-01",
+          "name": "New Year\u0027s Day",
+          "dayOfWeek": "Friday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "Red Square, Moscow",
+    "expectedCountryCode": "RU",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Red Square, Moscow",
+        "formattedAddress": "Krasnaya ploshad, Moskva, Russia, 109012",
+        "countryCode": "RU",
+        "timezone": "Europe/Moscow",
+        "utcOffset": "\u002B03",
+        "currentLocalTime": "2026-01-27T16:27:00"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-02-23",
+          "name": "Defender of the Fatherland Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-03-08",
+          "name": "International Women\u0027s Day",
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Labour Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-05-09",
+          "name": "Victory Day",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-06-12",
+          "name": "Russia Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-11-04",
+          "name": "Unity Day",
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2027-01-01",
+          "name": "New Year\u0027s Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2027-01-02",
+          "name": "New Year holiday",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2027-01-03",
+          "name": "New Year holiday",
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2027-01-04",
+          "name": "New Year holiday",
+          "dayOfWeek": "Monday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "Christ the Redeemer, Rio de Janeiro",
+    "expectedCountryCode": "BR",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Christ the Redeemer, Rio de Janeiro",
+        "formattedAddress": "Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ, 22261, Brazil",
+        "countryCode": "BR",
+        "timezone": "America/Sao_Paulo",
+        "utcOffset": "-03",
+        "currentLocalTime": "2026-01-27T10:27:01"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-02-16",
+          "name": "Carnival",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-02-17",
+          "name": "Carnival",
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Easter Sunday",
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-04-21",
+          "name": "Tiradentes",
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Labour Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-06-04",
+          "name": "Corpus Christi",
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-09-07",
+          "name": "Independence Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-10-12",
+          "name": "Our Lady of Aparecida",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-11-02",
+          "name": "All Souls\u0027 Day",
+          "dayOfWeek": "Monday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "CN Tower, Toronto",
+    "expectedCountryCode": "CA",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "CN Tower, Toronto",
+        "formattedAddress": "290 Bremner Blvd, Toronto, ON M5V 3L9, Canada",
+        "countryCode": "CA",
+        "timezone": "America/Toronto",
+        "utcOffset": "-05",
+        "currentLocalTime": "2026-01-27T08:27:02"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-02-16",
+          "name": "Family Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-05-18",
+          "name": "Victoria Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-07-01",
+          "name": "Canada Day",
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-08-03",
+          "name": "Civic Holiday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-09-07",
+          "name": "Labour Day",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-09-30",
+          "name": "National Day for Truth and Reconciliation",
+          "dayOfWeek": "Wednesday"
+        },
+        {
+          "date": "2026-10-12",
+          "name": "Thanksgiving",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "St. Stephen\u0027s Day",
+          "dayOfWeek": "Saturday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "Regus Central Station Brussels",
+    "expectedCountryCode": "BE",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Regus Central Station Brussels",
+        "formattedAddress": "Central Station, Rue des Colonies 11, 1000 Bruxelles, Belgium",
+        "countryCode": "BE",
+        "timezone": "Europe/Brussels",
+        "utcOffset": "\u002B01",
+        "currentLocalTime": "2026-01-27T14:27:02"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "Easter Sunday",
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Easter Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Labour Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Ascension Day",
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-05-15",
+          "name": "Day after Ascension Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Whit Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-07-21",
+          "name": "Belgian National Day",
+          "dayOfWeek": "Tuesday"
+        },
+        {
+          "date": "2026-08-15",
+          "name": "Assumption Day",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "All Saints\u0027 Day",
+          "dayOfWeek": "Sunday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  },
+  {
+    "location": "Bleicherweg 10, Zurich",
+    "expectedCountryCode": "CH",
+    "success": true,
+    "result": {
+      "location": {
+        "resolvedName": "Bleicherweg 10, Zurich",
+        "formattedAddress": "Bleicherweg 10, 8002 Z\u00FCrich, Switzerland",
+        "countryCode": "CH",
+        "timezone": "Europe/Zurich",
+        "utcOffset": "\u002B01",
+        "currentLocalTime": "2026-01-27T14:27:03"
+      },
+      "today": {
+        "date": "2026-01-27",
+        "dayOfWeek": "Tuesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "tomorrow": {
+        "date": "2026-01-28",
+        "dayOfWeek": "Wednesday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-29",
+        "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "thisWeek": {
+        "weekendDays": [
+          "Saturday",
+          "Sunday"
+        ],
+        "weekendDates": [
+          "2026-01-31",
+          "2026-02-01"
+        ],
+        "remainingWorkdays": [
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-30"
+        ]
+      },
+      "nextWeek": {
+        "monday": "2026-02-02",
+        "friday": "2026-02-06",
+        "weekendDates": [
+          "2026-02-07",
+          "2026-02-08"
+        ],
+        "workdays": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ]
+      },
+      "upcomingHolidays": [
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Easter Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Labour Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-05-14",
+          "name": "Ascension Day",
+          "dayOfWeek": "Thursday"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Whit Monday",
+          "dayOfWeek": "Monday"
+        },
+        {
+          "date": "2026-08-01",
+          "name": "Swiss National Day",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2026-09-20",
+          "name": "Federal Day of Thanksgiving",
+          "dayOfWeek": "Sunday"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day",
+          "dayOfWeek": "Friday"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "St. Stephen\u0027s Day",
+          "dayOfWeek": "Saturday"
+        },
+        {
+          "date": "2027-01-01",
+          "name": "New Year\u0027s Day",
+          "dayOfWeek": "Friday"
+        }
+      ],
+      "keyDates": {
+        "nextMonday": "2026-02-02",
+        "nextTuesday": "2026-02-03",
+        "nextWednesday": "2026-01-28",
+        "nextThursday": "2026-01-29",
+        "nextFriday": "2026-01-30",
+        "nextSaturday": "2026-01-31",
+        "nextSunday": "2026-02-01",
+        "nextWeekend": {
+          "start": "2026-01-31",
+          "end": "2026-02-01"
+        }
+      }
+    }
+  }
+]
