@@ -10,7 +10,6 @@
 ## Azure Deployment
 - Subscription: `<subscription-name>` (<subscription-id>)
 - Resource naming: `RG_WE_APPS_{app}_TEST`, `app-{name}-test`
-- IWG tagging policy: 12+ mandatory tags (see `terraform/variables.tf`)
 - Deploy via: `./terraform/deploy.ps1` or `az webapp deploy`
 - Platform: **Windows App Service** (Linux had exit code 134 crashes with .NET 9)
 

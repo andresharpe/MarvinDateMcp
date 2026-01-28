@@ -41,13 +41,13 @@ variable "google_api_key" {
   sensitive   = true
 }
 
-# Required IWG tags (12 mandatory tags)
+# Resource tags
 variable "tags" {
-  description = "Resource tags following IWG standards"
+  description = "Azure resource tags"
   type        = map(string)
   default = {
     Application          = "MarvinDateMcp"
-    Application_Owner    = "owner@example.com"
+    Application_Owner    = "andre.sharpe@example.com"
     Application_Type     = "PaaS"
     Business_Criticality = "NoBC"
     DR_Tag               = "NoDR"
@@ -55,11 +55,11 @@ variable "tags" {
     Deployed_By          = "Infra_terraform"
     Environment          = "TEST"
     Incident_Severity    = "n/a"
-    Managed_By           = "IWG"
+    Managed_By           = "Terraform"
     Purpose              = "MCP_Date_Context_Server"
     SLA_Tier             = "NoSLA"
     Status               = "PoC"
-    System_Owner         = "owner@example.com"
+    System_Owner         = "andre.sharpe@example.com"
     Take_On_Stream       = "MP"
   }
 }
