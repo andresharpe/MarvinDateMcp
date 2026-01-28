@@ -127,6 +127,115 @@ az webapp deploy --resource-group $ResourceGroup --name $AppName --src-path $Zip
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 Write-Host "`n=== Deployment Complete ===" -ForegroundColor Green
+
+# Verification Testing
+Write-Host "`n=== Verifying Deployment ===" -ForegroundColor Cyan
+
+# Wait for app startup
+Write-Host "Waiting for application startup (30s)..." -ForegroundColor Yellow
+Start-Sleep -Seconds 30
+
+# Test 1: Health endpoint
+Write-Host "`nTesting health endpoint..." -ForegroundColor Yellow
+try {
+    $healthResponse = Invoke-WebRequest -Uri "$AppUrl/health" -UseBasicParsing -TimeoutSec 10
+    if ($healthResponse.StatusCode -eq 200 -and $healthResponse.Content -eq "Healthy") {
+        Write-Host "✓ Health endpoint OK" -ForegroundColor Green
+    } else {
+        Write-Host "✗ Health endpoint returned unexpected response" -ForegroundColor Red
+        Write-Host "  Status: $($healthResponse.StatusCode)" -ForegroundColor Red
+        Write-Host "  Body: $($healthResponse.Content)" -ForegroundColor Red
+    }
+} catch {
+    Write-Host "✗ Health endpoint failed: $_" -ForegroundColor Red
+}
+
+# Test 2: MCP endpoint initialization
+Write-Host "`nTesting MCP endpoint..." -ForegroundColor Yellow
+try {
+    # Step 1: Initialize MCP session
+    $initPayload = @{
+        jsonrpc = "2.0"
+        id = 1
+        method = "initialize"
+        params = @{
+            protocolVersion = "2024-11-05"
+            capabilities = @{}
+            clientInfo = @{
+                name = "deploy-test"
+                version = "1.0.0"
+            }
+        }
+    } | ConvertTo-Json -Depth 10
+
+    $initResponse = Invoke-WebRequest `
+        -Uri "$AppUrl/mcp" `
+        -Method POST `
+        -ContentType "application/json" `
+        -Body $initPayload `
+        -UseBasicParsing `
+        -TimeoutSec 10
+
+    if ($initResponse.StatusCode -ne 200) {
+        Write-Host "✗ MCP initialize failed with status $($initResponse.StatusCode)" -ForegroundColor Red
+        Write-Host "  Response: $($initResponse.Content)" -ForegroundColor Red
+        exit 1
+    }
+
+    # Extract session ID from response headers
+    $sessionId = $initResponse.Headers['mcp-session-id']
+    if (-not $sessionId) {
+        Write-Host "✗ MCP initialize did not return mcp-session-id header" -ForegroundColor Red
+        Write-Host "  Headers: $($initResponse.Headers | ConvertTo-Json)" -ForegroundColor Red
+        exit 1
+    }
+
+    Write-Host "✓ MCP session initialized (ID: $sessionId)" -ForegroundColor Green
+
+    # Step 2: Test tools/list with session ID
+    $toolsPayload = @{
+        jsonrpc = "2.0"
+        id = 2
+        method = "tools/list"
+        params = @{}
+    } | ConvertTo-Json -Depth 10
+
+    $toolsResponse = Invoke-WebRequest `
+        -Uri "$AppUrl/mcp" `
+        -Method POST `
+        -ContentType "application/json" `
+        -Headers @{ "Mcp-Session-Id" = $sessionId } `
+        -Body $toolsPayload `
+        -UseBasicParsing `
+        -TimeoutSec 10
+
+    if ($toolsResponse.StatusCode -ne 200) {
+        Write-Host "✗ MCP tools/list failed with status $($toolsResponse.StatusCode)" -ForegroundColor Red
+        Write-Host "  Response: $($toolsResponse.Content)" -ForegroundColor Red
+        exit 1
+    }
+
+    # Parse and validate tools response
+    $toolsResult = $toolsResponse.Content | ConvertFrom-Json
+    if ($toolsResult.result.tools -and $toolsResult.result.tools.Count -gt 0) {
+        $toolNames = $toolsResult.result.tools | ForEach-Object { $_.name }
+        Write-Host "✓ MCP tools/list OK - Found tools: $($toolNames -join ', ')" -ForegroundColor Green
+
+        # Verify expected tool exists
+        if ($toolNames -contains "analyze_date_context") {
+            Write-Host "✓ analyze_date_context tool registered" -ForegroundColor Green
+        } else {
+            Write-Host "⚠ analyze_date_context tool not found in: $toolNames" -ForegroundColor Yellow
+        }
+    } else {
+        Write-Host "✗ MCP tools/list returned no tools" -ForegroundColor Red
+        Write-Host "  Response: $($toolsResponse.Content)" -ForegroundColor Red
+    }
+
+} catch {
+    Write-Host "✗ MCP endpoint test failed: $_" -ForegroundColor Red
+    Write-Host "  Exception: $($_.Exception.Message)" -ForegroundColor Red
+}
+
+Write-Host "`n=== Deployment Verification Complete ===" -ForegroundColor Green
 Write-Host "Application URL: $AppUrl" -ForegroundColor Cyan
-Write-Host "`nTest the MCP endpoint:" -ForegroundColor Yellow
-Write-Host "  curl $AppUrl/health" -ForegroundColor White

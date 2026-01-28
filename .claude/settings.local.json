@@ -13,7 +13,8 @@
       "Bash(Start-Sleep -Seconds 30)",
       "Bash(curl:*)",
       "Bash(az webapp log:*)",
-      "Bash(dotnet test:*)"
+      "Bash(dotnet test:*)",
+      "Bash(git status:*)"
     ]
   }
 }

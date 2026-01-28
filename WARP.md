@@ -19,8 +19,3 @@
 - `TreatWarningsAsErrors` enabled
 - Secrets: App Settings, not Key Vault (for now)
 
-## Deployment History
-- **2026-01-28**: Migrated from Linux to Windows App Service to fix exit code 134 crashes
-  - Root cause: Linux container orchestration issues with .NET 9 runtime
-  - Solution: Windows native .NET runtime eliminates container layer
-  - Result: Application starts successfully, all endpoints working, tests passing
