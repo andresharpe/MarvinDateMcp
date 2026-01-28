@@ -1,0 +1,14 @@
+# Copy this file to terraform.tfvars and fill in your values
+# DO NOT commit terraform.tfvars to source control
+
+# Google API Key - Get from https://console.cloud.google.com/
+# Required APIs: Geocoding API, Time Zone API
+google_api_key = "your_google_api_key_here"
+
+# Optional: Override defaults
+# subscription_id      = "<subscription-id>"
+# environment          = "test"
+# location             = "westeurope"
+# app_name             = "marvindatemcp"
+# resource_group_name  = "YOUR_RESOURCE_GROUP_NAME"
+# app_service_plan_sku = "B1"

@@ -4,6 +4,13 @@ using Polly;
 using Polly.Extensions.Http;
 using Serilog;
 
+Console.WriteLine("=== MarvinDateMcp Starting ===");
+Console.WriteLine($"Environment: {Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}");
+Console.WriteLine($"URLs: {Environment.GetEnvironmentVariable("ASPNETCORE_URLS")}");
+
+try
+{
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Load .env.local if it exists
@@ -69,9 +76,18 @@ app.MapHealthChecks("/health");
 app.MapGet("/", () => "MarvinDateMcp - Date Context MCP Server");
 
 // Log startup
+Console.WriteLine("=== MarvinDateMcp Ready, calling app.Run() ===");
 app.Logger.LogInformation("MarvinDateMcp starting up...");
 
 app.Run();
+
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"FATAL: {ex.GetType().Name}: {ex.Message}");
+    Console.WriteLine(ex.StackTrace);
+    throw;
+}
 
 // Retry policy with progressive delays
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()

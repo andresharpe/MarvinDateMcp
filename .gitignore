@@ -187,6 +187,12 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
+publish.zip
+tfplan
+
+# Agent temp files
+temp-scripts/
+workspace/
 
 # Publish Web Output
 *.[Pp]ublish.xml
