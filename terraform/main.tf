@@ -34,12 +34,12 @@ resource "azurerm_resource_group" "main" {
   }
 }
 
-# App Service Plan (Linux, Basic tier for simple deployment)
+# App Service Plan (Windows, Basic tier for simple deployment)
 resource "azurerm_service_plan" "main" {
   name                = "asp-${var.app_name}-${var.environment}"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
-  os_type             = "Linux"
+  os_type             = "Windows"
   sku_name            = var.app_service_plan_sku
   tags                = local.tags
 
@@ -48,8 +48,8 @@ resource "azurerm_service_plan" "main" {
   }
 }
 
-# Linux Web App (.NET 10 - will use 9.0 until 10 is available in Azure)
-resource "azurerm_linux_web_app" "api" {
+# Windows Web App (.NET 9)
+resource "azurerm_windows_web_app" "api" {
   name                = "app-${var.app_name}-${var.environment}"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
@@ -58,18 +58,17 @@ resource "azurerm_linux_web_app" "api" {
   tags                = local.tags
 
   site_config {
-    always_on         = var.app_service_plan_sku != "F1" # Always On not available on Free tier
-    ftps_state        = "Disabled"
+    always_on           = var.app_service_plan_sku != "F1"
+    ftps_state          = "Disabled"
     minimum_tls_version = "1.2"
     health_check_path                 = "/health"
     health_check_eviction_time_in_min = 5
-    app_command_line  = "dotnet MarvinDateMcp.Api.dll"
 
     application_stack {
-      dotnet_version = "9.0" # Use 9.0 until 10.0 available in Azure
+      current_stack  = "dotnet"
+      dotnet_version = "v9.0"
     }
 
-    # Restrict access - no SSH/FTP
     scm_minimum_tls_version = "1.2"
   }
 
@@ -79,7 +78,7 @@ resource "azurerm_linux_web_app" "api" {
     "DateService__HolidayCacheTtlDays"  = "30"
     "DateService__GeocodeCacheTtlDays"  = "7"
     "DateService__HolidayLookaheadDays" = "90"
-    
+
     # .NET settings
     "ASPNETCORE_ENVIRONMENT" = var.environment == "prod" ? "Production" : "Development"
   }
@@ -97,15 +96,15 @@ output "resource_group_name" {
 
 output "app_service_name" {
   description = "App Service name"
-  value       = azurerm_linux_web_app.api.name
+  value       = azurerm_windows_web_app.api.name
 }
 
 output "app_url" {
   description = "Application URL"
-  value       = "https://${azurerm_linux_web_app.api.default_hostname}"
+  value       = "https://${azurerm_windows_web_app.api.default_hostname}"
 }
 
 output "deployment_command" {
   description = "Command to deploy the app using az cli"
-  value       = "az webapp deploy --resource-group ${azurerm_resource_group.main.name} --name ${azurerm_linux_web_app.api.name} --src-path <path-to-zip>"
+  value       = "az webapp deploy --resource-group ${azurerm_resource_group.main.name} --name ${azurerm_windows_web_app.api.name} --src-path <path-to-zip>"
 }

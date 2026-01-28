@@ -4,7 +4,16 @@
       "WebSearch",
       "WebFetch(domain:www.nuget.org)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(terraform init:*)",
+      "Bash(terraform destroy:*)",
+      "Bash(terraform plan:*)",
+      "Bash(terraform apply:*)",
+      "Bash(pwsh -File deploy.ps1 -SkipTerraform:*)",
+      "Bash(Start-Sleep -Seconds 30)",
+      "Bash(curl:*)",
+      "Bash(az webapp log:*)",
+      "Bash(dotnet test:*)"
     ]
   }
 }

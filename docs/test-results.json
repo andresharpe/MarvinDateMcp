@@ -10,25 +10,25 @@
         "countryCode": "GB",
         "timezone": "Europe/London",
         "utcOffset": "\u002B00",
-        "currentLocalTime": "2026-01-27T13:26:56"
+        "currentLocalTime": "2026-01-28T12:44:18"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -43,7 +43,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -119,7 +118,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -142,25 +141,25 @@
         "countryCode": "US",
         "timezone": "America/New_York",
         "utcOffset": "-05",
-        "currentLocalTime": "2026-01-27T08:26:56"
+        "currentLocalTime": "2026-01-28T07:44:19"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -175,7 +174,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -251,7 +249,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -274,25 +272,25 @@
         "countryCode": "FR",
         "timezone": "Europe/Paris",
         "utcOffset": "\u002B01",
-        "currentLocalTime": "2026-01-27T14:26:57"
+        "currentLocalTime": "2026-01-28T13:44:20"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -307,7 +305,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -383,7 +380,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -406,25 +403,25 @@
         "countryCode": "JP",
         "timezone": "Asia/Tokyo",
         "utcOffset": "\u002B09",
-        "currentLocalTime": "2026-01-27T22:26:58"
+        "currentLocalTime": "2026-01-28T21:44:21"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -439,7 +436,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -515,7 +511,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -538,7 +534,7 @@
         "countryCode": "AU",
         "timezone": "Australia/Sydney",
         "utcOffset": "\u002B11",
-        "currentLocalTime": "2026-01-28T00:26:59"
+        "currentLocalTime": "2026-01-28T23:44:21"
       },
       "today": {
         "date": "2026-01-28",
@@ -669,25 +665,25 @@
         "countryCode": "DE",
         "timezone": "Europe/Berlin",
         "utcOffset": "\u002B01",
-        "currentLocalTime": "2026-01-27T14:26:59"
+        "currentLocalTime": "2026-01-28T13:44:22"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -702,7 +698,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -778,7 +773,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -801,25 +796,25 @@
         "countryCode": "RU",
         "timezone": "Europe/Moscow",
         "utcOffset": "\u002B03",
-        "currentLocalTime": "2026-01-27T16:27:00"
+        "currentLocalTime": "2026-01-28T15:44:22"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -834,7 +829,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -910,7 +904,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -933,25 +927,25 @@
         "countryCode": "BR",
         "timezone": "America/Sao_Paulo",
         "utcOffset": "-03",
-        "currentLocalTime": "2026-01-27T10:27:01"
+        "currentLocalTime": "2026-01-28T09:44:23"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -966,7 +960,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -1042,7 +1035,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -1065,25 +1058,25 @@
         "countryCode": "CA",
         "timezone": "America/Toronto",
         "utcOffset": "-05",
-        "currentLocalTime": "2026-01-27T08:27:02"
+        "currentLocalTime": "2026-01-28T07:44:24"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -1098,7 +1091,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -1174,7 +1166,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -1197,25 +1189,25 @@
         "countryCode": "BE",
         "timezone": "Europe/Brussels",
         "utcOffset": "\u002B01",
-        "currentLocalTime": "2026-01-27T14:27:02"
+        "currentLocalTime": "2026-01-28T13:44:24"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -1230,7 +1222,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -1306,7 +1297,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
@@ -1329,25 +1320,25 @@
         "countryCode": "CH",
         "timezone": "Europe/Zurich",
         "utcOffset": "\u002B01",
-        "currentLocalTime": "2026-01-27T14:27:03"
+        "currentLocalTime": "2026-01-28T13:44:25"
       },
       "today": {
-        "date": "2026-01-27",
-        "dayOfWeek": "Tuesday",
-        "isWeekend": false,
-        "isHoliday": false,
-        "holidayName": null
-      },
-      "tomorrow": {
         "date": "2026-01-28",
         "dayOfWeek": "Wednesday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
       },
-      "dayAfterTomorrow": {
+      "tomorrow": {
         "date": "2026-01-29",
         "dayOfWeek": "Thursday",
+        "isWeekend": false,
+        "isHoliday": false,
+        "holidayName": null
+      },
+      "dayAfterTomorrow": {
+        "date": "2026-01-30",
+        "dayOfWeek": "Friday",
         "isWeekend": false,
         "isHoliday": false,
         "holidayName": null
@@ -1362,7 +1353,6 @@
           "2026-02-01"
         ],
         "remainingWorkdays": [
-          "2026-01-27",
           "2026-01-28",
           "2026-01-29",
           "2026-01-30"
@@ -1438,7 +1428,7 @@
       "keyDates": {
         "nextMonday": "2026-02-02",
         "nextTuesday": "2026-02-03",
-        "nextWednesday": "2026-01-28",
+        "nextWednesday": "2026-02-04",
         "nextThursday": "2026-01-29",
         "nextFriday": "2026-01-30",
         "nextSaturday": "2026-01-31",
