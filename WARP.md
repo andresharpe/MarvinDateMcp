@@ -12,11 +12,15 @@
 - Resource naming: `RG_WE_APPS_{app}_TEST`, `app-{name}-test`
 - IWG tagging policy: 12+ mandatory tags (see `terraform/variables.tf`)
 - Deploy via: `./terraform/deploy.ps1` or `az webapp deploy`
+- Platform: **Windows App Service** (Linux had exit code 134 crashes with .NET 9)
 
 ## Code Standards
 - Target: .NET 9 (Azure App Service compatible)
 - `TreatWarningsAsErrors` enabled
 - Secrets: App Settings, not Key Vault (for now)
 
-## Known Issues
-- Linux App Service crashes with exit code 134 - investigation ongoing
+## Deployment History
+- **2026-01-28**: Migrated from Linux to Windows App Service to fix exit code 134 crashes
+  - Root cause: Linux container orchestration issues with .NET 9 runtime
+  - Solution: Windows native .NET runtime eliminates container layer
+  - Result: Application starts successfully, all endpoints working, tests passing
