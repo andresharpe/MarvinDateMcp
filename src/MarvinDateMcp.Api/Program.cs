@@ -163,6 +163,10 @@ builder.Services.AddScoped<IDateContextService, DateContextService>();
 
 builder.Services.AddHealthChecks();
 
+// Application Insights telemetry
+builder.Services.AddApplicationInsightsTelemetry();
+Log.Information("Application Insights telemetry configured");
+
 var app = builder.Build();
 
 // Security Headers Middleware
