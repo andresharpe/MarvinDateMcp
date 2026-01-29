@@ -8,7 +8,7 @@
 - Terraform files → `./terraform/`
 
 ## Azure Deployment
-- Subscription: `<subscription-name>` (<subscription-id>)
+- Subscription: Set in `terraform/terraform.tfvars`
 - Resource naming: `RG_WE_APPS_{app}_TEST`, `app-{name}-test`
 - Deploy via: `./terraform/deploy.ps1` or `az webapp deploy`
 - Platform: **Windows App Service** (Linux had exit code 134 crashes with .NET 9)

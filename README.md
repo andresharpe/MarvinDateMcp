@@ -1,6 +1,8 @@
 # MarvinDateMcp - Date Context MCP Server
 
-A Model Context Protocol (MCP) server that provides comprehensive date context analysis for location-aware AI applications. Built with .NET 10 and designed to help LLMs understand dates in conversational contexts.
+A Model Context Protocol (MCP) server that provides comprehensive date context analysis for location-aware AI applications. Built with .NET 9 and designed to help LLMs understand dates in conversational contexts.
+
+**Production Ready** with enterprise-grade security controls.
 
 ## Features
 
@@ -12,6 +14,19 @@ A Model Context Protocol (MCP) server that provides comprehensive date context a
 - **Caching**: In-memory caching for Google API calls and holiday data
 - **HTTP transport**: Uses MCP HTTP transport for remote access
 
+## Security Features ✅
+
+- **API Key Authentication**: All MCP endpoints require X-API-Key header
+- **Rate Limiting**: 100 requests/minute per IP address
+- **Azure Key Vault**: Secrets stored securely with Managed Identity
+- **CORS Restrictions**: Configurable allowed origins (no wildcards)
+- **Security Headers**: HSTS, CSP, X-Frame-Options, X-XSS-Protection
+- **Application Insights**: Comprehensive logging and monitoring
+- **IP Allowlisting**: Optional NSG-based network restrictions
+- **HTTPS Only**: TLS 1.2+ enforced
+
+See [SECURITY.md](SECURITY.md) for detailed security architecture.
+
 ## Setup
 
 ### Prerequisites
@@ -19,14 +34,16 @@ A Model Context Protocol (MCP) server that provides comprehensive date context a
 - .NET 10 SDK
 - Google API Key with Geocoding API and Time Zone API enabled
 
-### Configuration
+### Local Development
 
-1. **Set up Google API Key**:
-   - Get an API key from [Google Cloud Console](https://console.cloud.google.com/)
+1. **Set up API Keys**:
+   - Get Google API key from [Google Cloud Console](https://console.cloud.google.com/)
    - Enable Geocoding API and Time Zone API
-   - Edit `.env.local` in the project root:
-     ```
-     GOOGLE_API_KEY=your_actual_api_key_here
+   - Generate MCP API key: `openssl rand -base64 32`
+   - Create `.env.local` in the project root:
+     ```bash
+     GOOGLE_API_KEY=your_google_api_key_here
+     MCP_API_KEY=your_generated_mcp_key_here
      ```
 
 2. **Build the project**:
@@ -41,14 +58,51 @@ A Model Context Protocol (MCP) server that provides comprehensive date context a
 
 The server will start on `http://localhost:5000` (or configured port).
 
+### Azure Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for comprehensive deployment guide.
+
+**Quick Deploy:**
+```bash
+# Configure .env.local with API keys
+cd terraform
+.\deploy.ps1
+```
+
+This will:
+- Deploy Azure infrastructure (Key Vault, App Service, Application Insights)
+- Build and deploy the application
+- Run verification tests
+
 ## MCP Tool
 
 ### `analyze_date_context`
 
 **Description**: Analyzes comprehensive date context for a location. Returns today, tomorrow, day after tomorrow, this week, next week, upcoming holidays, and key dates.
 
+**Authentication**: Requires `X-API-Key` header with valid MCP API key.
+
 **Input**:
 - `location` (string): Place name, city, or POI (e.g., "Dubai", "London", "JFK Airport")
+
+**Example Request**:
+```bash
+curl -X POST https://YOUR_APP_SERVICE_URL/mcp \
+  -H "X-API-Key: your_mcp_api_key" \
+  -H "Content-Type: application/json" \
+  -H "Mcp-Session-Id: your_session_id" \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "tools/call",
+    "params": {
+      "name": "analyze_date_context",
+      "arguments": {
+        "location": "Dubai"
+      }
+    }
+  }'
+```
 
 **Output**: JSON with comprehensive date information:
 
@@ -130,13 +184,21 @@ The server supports location-specific weekends:
 
 ## Technologies
 
-- .NET 10
+- .NET 9
 - ModelContextProtocol.AspNetCore 0.6.0-preview.1
 - NodaTime 3.2.2 (timezone handling)
 - Serilog (logging)
 - Polly (HTTP resilience)
+- Azure Key Vault (secrets management)
+- Azure Application Insights (monitoring)
 - Google Geocoding API & Time Zone API
 - Nager.Date API (bank holidays)
+
+## Documentation
+
+- [SECURITY.md](SECURITY.md) - Security architecture and controls
+- [DEPLOYMENT.md](DEPLOYMENT.md) - Deployment guide and troubleshooting
+- [.env.example](.env.example) - Environment variables template
 
 ## License
 

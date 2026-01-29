@@ -15,7 +15,10 @@
       "Bash(az webapp log:*)",
       "Bash(dotnet test:*)",
       "Bash(git status:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(grep:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs"
     ]
   }
 }

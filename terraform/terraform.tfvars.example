@@ -1,14 +1,58 @@
 # Copy this file to terraform.tfvars and fill in your values
 # DO NOT commit terraform.tfvars to source control
 
-# Google API Key - Get from https://console.cloud.google.com/
-# Required APIs: Geocoding API, Time Zone API
-google_api_key = "your_google_api_key_here"
+# Azure Subscription Configuration
+# Get your subscription ID: az account show --query id -o tsv
+subscription_id = ""  # Required - your Azure subscription ID
 
-# Optional: Override defaults
-# subscription_id      = "<subscription-id>"
-# environment          = "test"
-# location             = "westeurope"
-# app_name             = "marvindatemcp"
-# resource_group_name  = "YOUR_RESOURCE_GROUP_NAME"
-# app_service_plan_sku = "B1"
+# Environment Configuration
+environment             = "test"
+location                = "westeurope"
+app_name                = "marvindatemcp"
+resource_group_name     = "YOUR_RESOURCE_GROUP_NAME"
+app_service_plan_sku    = "B1"  # B1 = Basic, S1 = Standard, P1V2 = Premium
+
+# Security Configuration - API Keys
+# IMPORTANT: Do not commit actual keys to git. Use .env.local for local values.
+# These values should be passed via command line or CI/CD pipeline.
+google_api_key = ""  # Set via: -var="google_api_key=$env:GOOGLE_API_KEY"
+mcp_api_key    = ""  # Set via: -var="mcp_api_key=$env:MCP_API_KEY"
+
+# Security Configuration - Network Access Control
+# IMPORTANT: Configure this for production deployments
+# Leave empty ([]) to allow all IPs (NOT RECOMMENDED FOR PRODUCTION)
+# Add your office/VPN IP addresses for security
+allowed_ip_addresses = [
+  # Example entries (uncomment and update with your actual IPs):
+  # "203.0.113.0/24",      # Office network CIDR
+  # "198.51.100.42/32",    # VPN gateway IP
+  # "192.0.2.1/32",        # Admin workstation IP
+]
+
+# Rate Limiting Configuration
+# IMPORTANT: Adjust for production with high-traffic clients like ElevenLabs
+rate_limit_permits        = 100   # Dev: 100, Test: 500, Prod: 5000+
+rate_limit_window_minutes = 1     # Time window in minutes
+
+# Retry Policy Configuration
+retry_count              = 3      # Number of retry attempts
+retry_base_delay_seconds = 2      # Base delay (exponential backoff)
+
+# Resource Tags
+tags = {
+  Application          = "MarvinDateMcp"
+  Application_Owner    = "andre.sharpe@example.com"
+  Application_Type     = "PaaS"
+  Business_Criticality = "NoBC"
+  DR_Tag               = "NoDR"
+  Data_Classification  = "Internal"
+  Deployed_By          = "Infra_terraform"
+  Environment          = "TEST"
+  Incident_Severity    = "n/a"
+  Managed_By           = "Terraform"
+  Purpose              = "MCP_Date_Context_Server"
+  SLA_Tier             = "NoSLA"
+  Status               = "PoC"
+  System_Owner         = "andre.sharpe@example.com"
+  Take_On_Stream       = "MP"
+}

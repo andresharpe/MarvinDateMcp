@@ -1,7 +1,7 @@
 variable "subscription_id" {
-  description = "Azure subscription ID (<subscription-name>)"
+  description = "Azure subscription ID"
   type        = string
-  default     = "<subscription-id>"
+  # No default - must be provided via terraform.tfvars or -var flag
 }
 
 variable "environment" {
@@ -41,13 +41,52 @@ variable "google_api_key" {
   sensitive   = true
 }
 
+variable "mcp_api_key" {
+  description = "API Key for MCP endpoint authentication"
+  type        = string
+  sensitive   = true
+}
+
+# Security settings
+variable "allowed_ip_addresses" {
+  description = "List of allowed IP addresses/CIDR blocks for NSG rules"
+  type        = list(string)
+  default     = []
+}
+
+# Rate Limiting
+variable "rate_limit_permits" {
+  description = "Max requests per window per IP (100 for dev, 5000+ for prod with ElevenLabs)"
+  type        = number
+  default     = 100
+}
+
+variable "rate_limit_window_minutes" {
+  description = "Rate limit window in minutes"
+  type        = number
+  default     = 1
+}
+
+# Retry Policy
+variable "retry_count" {
+  description = "Number of HTTP retry attempts for transient errors"
+  type        = number
+  default     = 3
+}
+
+variable "retry_base_delay_seconds" {
+  description = "Base delay in seconds for exponential backoff"
+  type        = number
+  default     = 2
+}
+
 # Resource tags
 variable "tags" {
   description = "Azure resource tags"
   type        = map(string)
   default = {
     Application          = "MarvinDateMcp"
-    Application_Owner    = "andre.sharpe@example.com"
+    Application_Owner    = "owner@example.com"
     Application_Type     = "PaaS"
     Business_Criticality = "NoBC"
     DR_Tag               = "NoDR"
@@ -55,11 +94,11 @@ variable "tags" {
     Deployed_By          = "Infra_terraform"
     Environment          = "TEST"
     Incident_Severity    = "n/a"
-    Managed_By           = "Terraform"
+    Managed_By           = "IWG"
     Purpose              = "MCP_Date_Context_Server"
     SLA_Tier             = "NoSLA"
     Status               = "PoC"
-    System_Owner         = "andre.sharpe@example.com"
+    System_Owner         = "owner@example.com"
     Take_On_Stream       = "MP"
   }
 }
