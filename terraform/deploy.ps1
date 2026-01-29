@@ -101,19 +101,20 @@ mcp_api_key = "$mcpKey"
             Write-Host "First-time deployment: Using two-step Terraform apply..." -ForegroundColor Yellow
             
             Write-Host "Step 1: Creating infrastructure (excluding Key Vault app identity policy)..." -ForegroundColor Yellow
-            $targets = @(
-                "-target=azurerm_resource_group.main",
-                "-target=azurerm_service_plan.main",
-                "-target=azurerm_windows_web_app.api",
-                "-target=azurerm_key_vault.main",
-                "-target=azurerm_key_vault_access_policy.deployer",
-                "-target=azurerm_key_vault_secret.google_api_key",
-                "-target=azurerm_key_vault_secret.mcp_api_key",
-                "-target=azurerm_application_insights.main",
-                "-target=azurerm_log_analytics_workspace.main"
+            $terraformArgs = @(
+                'apply',
+                '-target=azurerm_resource_group.main',
+                '-target=azurerm_service_plan.main',
+                '-target=azurerm_windows_web_app.api',
+                '-target=azurerm_key_vault.main',
+                '-target=azurerm_key_vault_access_policy.deployer',
+                '-target=azurerm_key_vault_secret.google_api_key',
+                '-target=azurerm_key_vault_secret.mcp_api_key',
+                '-target=azurerm_application_insights.main',
+                '-target=azurerm_log_analytics_workspace.main',
+                '-auto-approve'
             )
-            $targetArgs = $targets -join " "
-            Invoke-Expression "terraform apply $targetArgs -auto-approve"
+            & terraform $terraformArgs
             if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
             
             Write-Host "Step 2: Creating Key Vault access policy for app identity..." -ForegroundColor Yellow
