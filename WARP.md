@@ -2,6 +2,7 @@
 
 ## File Organization
 - **Never** create files in project root - use appropriate directories
+- Documentation → `./docs/` (except README.md, LICENSE, CHANGELOG.md)
 - Logs/downloads → `./logs/` (gitignored)
 - Temp scripts/test files → `./temp-scripts/` (gitignored)
 - Working notes/analysis → `./workspace/` (gitignored)
