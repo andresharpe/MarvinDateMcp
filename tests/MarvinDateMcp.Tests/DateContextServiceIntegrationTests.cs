@@ -258,6 +258,34 @@ public class DateContextServiceIntegrationTests : IDisposable
         Assert.All(results, r => Assert.True(r.Success, $"Failed: {r.Location} - {r.Error}"));
     }
 
+    [Fact]
+    public async Task AnalyzeDateContextAsync_WithAsOfDate_ShouldUseProvidedDate()
+    {
+        // Arrange
+        using var scope = _serviceProvider.CreateScope();
+        var service = scope.ServiceProvider.GetRequiredService<IDateContextService>();
+        
+        var asOfDate = new DateOnly(2026, 12, 25); // Christmas Day 2026 (Friday)
+        
+        _output.WriteLine($"Testing with as_of_date: {asOfDate:yyyy-MM-dd}");
+
+        // Act
+        var result = await service.AnalyzeDateContextAsync("London", asOfDate);
+
+        // Assert
+        Assert.NotNull(result);
+        Assert.Equal("2026-12-25", result.Today.Date);
+        Assert.Equal("Friday", result.Today.DayOfWeek);
+        Assert.Equal("2026-12-26", result.Tomorrow.Date);
+        Assert.Equal("2026-12-27", result.DayAfterTomorrow.Date);
+        
+        _output.WriteLine($"Today: {result.Today.Date} ({result.Today.DayOfWeek})");
+        _output.WriteLine($"Tomorrow: {result.Tomorrow.Date} ({result.Tomorrow.DayOfWeek})");
+        _output.WriteLine($"Is Holiday: {result.Today.IsHoliday} - {result.Today.HolidayName}");
+        
+        _output.WriteLine("\n=== as_of_date Test Passed ===");
+    }
+
     public void Dispose()
     {
         _serviceProvider?.Dispose();

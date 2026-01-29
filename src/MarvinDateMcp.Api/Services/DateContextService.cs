@@ -27,9 +27,9 @@ public class DateContextService : IDateContextService
         _options = options.Value;
     }
     
-    public async Task<DateContextResponse> AnalyzeDateContextAsync(string location, CancellationToken cancellationToken = default)
+    public async Task<DateContextResponse> AnalyzeDateContextAsync(string location, DateOnly? asOfDate = null, CancellationToken cancellationToken = default)
     {
-        _logger.LogInformation("Analyzing date context for location: {Location}", location);
+        _logger.LogInformation("Analyzing date context for location: {Location}, AsOfDate: {AsOfDate}", location, asOfDate?.ToString("yyyy-MM-dd") ?? "today");
         
         // Step 1: Resolve location
         var resolvedLocation = await _geocodingService.ResolveLocationAsync(location, cancellationToken);
@@ -38,9 +38,9 @@ public class DateContextService : IDateContextService
         var now = SystemClock.Instance.GetCurrentInstant();
         var timezone = DateTimeZoneProviders.Tzdb[resolvedLocation.TimeZoneId];
         var localNow = now.InZone(timezone);
-        var localToday = localNow.Date;
         
-        var today = new DateOnly(localToday.Year, localToday.Month, localToday.Day);
+        // Use asOfDate if provided, otherwise use actual current date
+        var today = asOfDate ?? new DateOnly(localNow.Date.Year, localNow.Date.Month, localNow.Date.Day);
         var tomorrow = today.AddDays(1);
         var dayAfterTomorrow = today.AddDays(2);
         

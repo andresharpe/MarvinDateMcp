@@ -83,7 +83,8 @@ This will:
 **Authentication**: Requires `X-API-Key` header with valid MCP API key.
 
 **Input**:
-- `location` (string): Place name, city, or POI (e.g., "Dubai", "London", "JFK Airport")
+- `location` (string, required): Place name, city, or POI (e.g., "Dubai", "London", "JFK Airport")
+- `as_of_date` (string, optional): Date to use as "today" for all calculations, in ISO 8601 format (e.g., "2026-02-15"). If not provided, uses the current date in the location's timezone.
 
 **Example Request**:
 ```bash
@@ -98,7 +99,8 @@ curl -X POST https://YOUR_APP_SERVICE_URL/mcp \
     "params": {
       "name": "analyze_date_context",
       "arguments": {
-        "location": "Dubai"
+        "location": "Dubai",
+        "as_of_date": "2026-02-15"
       }
     }
   }'

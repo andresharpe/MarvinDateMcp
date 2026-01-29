@@ -18,15 +18,28 @@ public sealed class DateContextTool
     public static async Task<string> AnalyzeDateContext(
         [Description("The place name, city, or point of interest to analyze dates for (e.g., 'Dubai', 'London', 'JFK Airport', 'Burj Khalifa')")]
         string location,
+        [Description("Optional date to use as 'today' for all calculations, in ISO 8601 format (e.g., '2026-02-15'). If not provided, uses the current date in the location's timezone.")]
+        string? as_of_date,
         ILogger<DateContextTool> logger,
         IServiceProvider serviceProvider)
     {
-        logger.LogInformation("---> Analyzing date context for location: {Location}", location);
+        logger.LogInformation("---> Analyzing date context for location: {Location}, AsOfDate: {AsOfDate}", location, as_of_date ?? "today");
         
         try
         {
+            // Parse as_of_date if provided
+            DateOnly? asOfDate = null;
+            if (!string.IsNullOrWhiteSpace(as_of_date))
+            {
+                if (!DateOnly.TryParse(as_of_date, out var parsedDate))
+                {
+                    return JsonSerializer.Serialize(new { error = $"Invalid date format: '{as_of_date}'. Please use ISO 8601 format (e.g., '2026-02-15')." }, JsonOptions);
+                }
+                asOfDate = parsedDate;
+            }
+            
             var dateContextService = serviceProvider.GetRequiredService<IDateContextService>();
-            var response = await dateContextService.AnalyzeDateContextAsync(location);
+            var response = await dateContextService.AnalyzeDateContextAsync(location, asOfDate);
             
             var result = JsonSerializer.Serialize(response, JsonOptions);
             
