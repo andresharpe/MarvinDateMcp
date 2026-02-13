@@ -168,13 +168,13 @@ public class DateContextServiceIntegrationTests : IDisposable
 
         // Assert - Key Dates
         Assert.NotNull(result.KeyDates);
-        Assert.NotEmpty(result.KeyDates.NextMonday);
-        Assert.NotEmpty(result.KeyDates.NextFriday);
-        Assert.NotNull(result.KeyDates.NextWeekend);
+        Assert.NotEmpty(result.KeyDates.NextWeekMonday);
+        Assert.NotEmpty(result.KeyDates.NextWeekFriday);
+        Assert.NotNull(result.KeyDates.NextWeekWeekend);
 
         _output.WriteLine($"\nKey Dates:");
-        _output.WriteLine($"  Next Monday: {result.KeyDates.NextMonday}");
-        _output.WriteLine($"  Next Weekend: {result.KeyDates.NextWeekend.Start} to {result.KeyDates.NextWeekend.End}");
+        _output.WriteLine($"  Next Week Monday: {result.KeyDates.NextWeekMonday}");
+        _output.WriteLine($"  Next Week Weekend: {result.KeyDates.NextWeekWeekend.Start} to {result.KeyDates.NextWeekWeekend.End}");
 
         // Assert - Upcoming Holidays
         Assert.NotNull(result.UpcomingHolidays);

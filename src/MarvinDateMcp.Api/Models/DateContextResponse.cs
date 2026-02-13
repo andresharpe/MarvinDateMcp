@@ -45,14 +45,14 @@ public record NextWeekInfo(
 );
 
 public record KeyDatesInfo(
-    string NextMonday,
-    string NextTuesday,
-    string NextWednesday,
-    string NextThursday,
-    string NextFriday,
-    string NextSaturday,
-    string NextSunday,
-    WeekendRange NextWeekend
+    string NextWeekMonday,
+    string NextWeekTuesday,
+    string NextWeekWednesday,
+    string NextWeekThursday,
+    string NextWeekFriday,
+    string NextWeekSaturday,
+    string NextWeekSunday,
+    WeekendRange NextWeekWeekend
 );
 
 public record WeekendRange(

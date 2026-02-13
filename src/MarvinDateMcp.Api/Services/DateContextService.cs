@@ -180,43 +180,44 @@ public class DateContextService : IDateContextService
     
     private KeyDatesInfo BuildKeyDates(DateOnly today, string countryCode)
     {
-        var keyDates = new Dictionary<DayOfWeek, DateOnly>();
+        // Calculate next week's Monday (the full calendar week after this one)
+        var daysUntilNextMonday = ((int)DayOfWeek.Monday - (int)today.DayOfWeek + 7) % 7;
+        if (daysUntilNextMonday == 0) daysUntilNextMonday = 7;
+        var nextWeekMonday = today.AddDays(daysUntilNextMonday);
         
-        // Find next occurrence of each day of the week
-        foreach (DayOfWeek targetDay in Enum.GetValues<DayOfWeek>())
-        {
-            var daysUntilTarget = ((int)targetDay - (int)today.DayOfWeek + 7) % 7;
-            if (daysUntilTarget == 0) daysUntilTarget = 7; // Skip to next week if today
-            
-            keyDates[targetDay] = today.AddDays(daysUntilTarget);
-        }
+        // All days are relative to next week's Monday
+        var nextWeekTuesday = nextWeekMonday.AddDays(1);
+        var nextWeekWednesday = nextWeekMonday.AddDays(2);
+        var nextWeekThursday = nextWeekMonday.AddDays(3);
+        var nextWeekFriday = nextWeekMonday.AddDays(4);
+        var nextWeekSaturday = nextWeekMonday.AddDays(5);
+        var nextWeekSunday = nextWeekMonday.AddDays(6);
         
-        // Find next weekend
-        var nextWeekendStart = _weekendService.GetNextWeekend(today, countryCode);
+        // Next week's weekend dates
         var weekendDays = _weekendService.GetWeekendDays(countryCode);
-        
-        // If weekend is 2 days, the end is the day after start (if it's also a weekend day)
-        var nextWeekendEnd = nextWeekendStart;
-        if (weekendDays.Length == 2)
+        var nextWeekWeekendDates = new List<DateOnly>();
+        for (var date = nextWeekMonday; date <= nextWeekSunday; date = date.AddDays(1))
         {
-            var nextDay = nextWeekendStart.AddDays(1);
-            if (weekendDays.Contains(nextDay.DayOfWeek))
+            if (weekendDays.Contains(date.DayOfWeek))
             {
-                nextWeekendEnd = nextDay;
+                nextWeekWeekendDates.Add(date);
             }
         }
         
+        var weekendStart = nextWeekWeekendDates.FirstOrDefault();
+        var weekendEnd = nextWeekWeekendDates.LastOrDefault();
+        
         return new KeyDatesInfo(
-            keyDates[DayOfWeek.Monday].ToString("yyyy-MM-dd"),
-            keyDates[DayOfWeek.Tuesday].ToString("yyyy-MM-dd"),
-            keyDates[DayOfWeek.Wednesday].ToString("yyyy-MM-dd"),
-            keyDates[DayOfWeek.Thursday].ToString("yyyy-MM-dd"),
-            keyDates[DayOfWeek.Friday].ToString("yyyy-MM-dd"),
-            keyDates[DayOfWeek.Saturday].ToString("yyyy-MM-dd"),
-            keyDates[DayOfWeek.Sunday].ToString("yyyy-MM-dd"),
+            nextWeekMonday.ToString("yyyy-MM-dd"),
+            nextWeekTuesday.ToString("yyyy-MM-dd"),
+            nextWeekWednesday.ToString("yyyy-MM-dd"),
+            nextWeekThursday.ToString("yyyy-MM-dd"),
+            nextWeekFriday.ToString("yyyy-MM-dd"),
+            nextWeekSaturday.ToString("yyyy-MM-dd"),
+            nextWeekSunday.ToString("yyyy-MM-dd"),
             new WeekendRange(
-                nextWeekendStart.ToString("yyyy-MM-dd"),
-                nextWeekendEnd.ToString("yyyy-MM-dd")
+                weekendStart.ToString("yyyy-MM-dd"),
+                weekendEnd.ToString("yyyy-MM-dd")
             )
         );
     }
