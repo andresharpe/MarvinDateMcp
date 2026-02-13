@@ -17,4 +17,9 @@ public class RetryPolicyOptions
     /// Actual delay = BaseDelaySeconds ^ retryAttempt
     /// </summary>
     public int BaseDelaySeconds { get; set; } = 2;
+
+    /// <summary>
+    /// Timeout in seconds per individual HTTP request attempt
+    /// </summary>
+    public int TimeoutSeconds { get; set; } = 10;
 }

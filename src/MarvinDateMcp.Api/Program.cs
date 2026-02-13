@@ -4,6 +4,7 @@ using MarvinDateMcp.Api.Services;
 using Microsoft.AspNetCore.RateLimiting;
 using Polly;
 using Polly.Extensions.Http;
+using Polly.Timeout;
 using Serilog;
 using System.Threading.RateLimiting;
 using Azure.Identity;
@@ -150,13 +151,15 @@ var retryOptions = builder.Configuration
 
 // Add services with HttpClient and retry policies
 builder.Services.AddHttpClient<IGoogleGeocodingService, GoogleGeocodingService>()
-    .AddPolicyHandler(GetRetryPolicy(retryOptions));
+    .AddPolicyHandler(GetRetryPolicy(retryOptions))
+    .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(retryOptions.TimeoutSeconds));
 
 builder.Services.AddHttpClient<IHolidayService, HolidayService>()
-    .AddPolicyHandler(GetRetryPolicy(retryOptions));
+    .AddPolicyHandler(GetRetryPolicy(retryOptions))
+    .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(retryOptions.TimeoutSeconds));
 
-Log.Information("Retry policy configured: {RetryCount} retries with {BaseDelay}s base delay",
-    retryOptions.RetryCount, retryOptions.BaseDelaySeconds);
+Log.Information("Retry policy configured: {RetryCount} retries with {BaseDelay}s base delay, {Timeout}s timeout per attempt",
+    retryOptions.RetryCount, retryOptions.BaseDelaySeconds, retryOptions.TimeoutSeconds);
 
 builder.Services.AddSingleton<WeekendService>();
 builder.Services.AddScoped<IDateContextService, DateContextService>();

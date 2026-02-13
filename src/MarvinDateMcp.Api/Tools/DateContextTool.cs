@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.Text.Json;
+using MarvinDateMcp.Api.Exceptions;
 using MarvinDateMcp.Api.Services;
 using ModelContextProtocol.Server;
 
@@ -47,10 +48,25 @@ public sealed class DateContextTool
             
             return result;
         }
-        catch (InvalidOperationException ex)
+        catch (LocationResolutionException ex)
         {
-            logger.LogError(ex, "Failed to analyze date context for {Location}", location);
+            logger.LogError(ex, "Location resolution failed for {Location} (Reason: {Reason})", location, ex.Reason);
             return JsonSerializer.Serialize(new { error = ex.Message }, JsonOptions);
+        }
+        catch (HolidayServiceException ex)
+        {
+            logger.LogError(ex, "Holiday service failed for {Location} (Country: {Country})", location, ex.CountryCode);
+            return JsonSerializer.Serialize(new { error = ex.Message }, JsonOptions);
+        }
+        catch (HttpRequestException ex)
+        {
+            logger.LogError(ex, "Network error analyzing date context for {Location}", location);
+            return JsonSerializer.Serialize(new { error = "Unable to reach the location service. Please try again later." }, JsonOptions);
+        }
+        catch (JsonException ex)
+        {
+            logger.LogError(ex, "Deserialization error analyzing date context for {Location}", location);
+            return JsonSerializer.Serialize(new { error = "Received an unexpected response from the location service." }, JsonOptions);
         }
         catch (Exception ex)
         {

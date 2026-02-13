@@ -1,6 +1,8 @@
 using System.Collections.Concurrent;
 using System.Net.Http.Json;
+using System.Text.Json;
 using MarvinDateMcp.Api.Configuration;
+using MarvinDateMcp.Api.Exceptions;
 using MarvinDateMcp.Api.Models;
 using Microsoft.Extensions.Options;
 
@@ -98,7 +100,7 @@ public class HolidayService : IHolidayService
             
             return holidays;
         }
-        catch (HttpRequestException ex) when (ex.Message.Contains("404"))
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
         {
             _logger.LogWarning("No holidays found for {Country} {Year}", countryCode, year);
             
@@ -109,6 +111,22 @@ public class HolidayService : IHolidayService
             );
             
             return [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Holiday service request failed for {Country} {Year}", countryCode, year);
+            throw new HolidayServiceException(
+                $"Unable to retrieve holiday information for '{countryCode}'. Please try again later.",
+                countryCode,
+                ex);
+        }
+        catch (JsonException ex)
+        {
+            _logger.LogError(ex, "Holiday service returned invalid data for {Country} {Year}", countryCode, year);
+            throw new HolidayServiceException(
+                $"Received unexpected data from the holiday service for '{countryCode}'.",
+                countryCode,
+                ex);
         }
     }
     
